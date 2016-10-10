@@ -1,0 +1,9 @@
+apply plugin: 'application'
+
+description = 'Calculator Application'
+
+mainClassName = 'calc.CalcMain'
+
+dependencies {
+    compile project(':calc-lib')
+}

@@ -1,0 +1,27 @@
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'jacoco'
+    apply plugin: 'findbugs'
+    apply plugin: 'checkstyle'
+
+    checkstyle {
+        configFile = file("$rootDir/config/checkstyle/google-checks.xml")
+        toolVersion = '6.16.1'
+    }
+    
+    findbugsTest.enabled = false
+    checkstyleTest.enabled = false
+    
+    dependencies {
+        compile 'org.slf4j:slf4j-api:1.7.18'
+
+        testCompile 'junit:junit:4.12'
+    }
+}
