@@ -10,6 +10,11 @@ subprojects {
     apply plugin: 'jacoco'
     apply plugin: 'findbugs'
     apply plugin: 'checkstyle'
+    apply plugin: 'pmd'
+
+    pmd {
+        ruleSets = ['rulesets/java/basic.xml', 'rulesets/java/braces.xml']
+    }
 
     checkstyle {
         configFile = file("$rootDir/config/checkstyle/google-checks.xml")
@@ -18,6 +23,7 @@ subprojects {
     
     findbugsTest.enabled = false
     checkstyleTest.enabled = false
+    pmdTest.enabled = false
     
     dependencies {
         compile 'org.slf4j:slf4j-api:1.7.18'
