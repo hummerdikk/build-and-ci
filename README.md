@@ -22,6 +22,6 @@ A következő dolgokat kérem szállítani:
 1. ScreenShot vagy nyers log az utolsó Jenkins buildről
 
 ## 3. Határidő
-2016 december 16.
+2016 december 22.
 
 Mindezt zip / tar.gz formátumban a következő címre: laszlo_kishalmi@epam.com, ELTE/PPKE Beadandó tárgy megjelöléssel.
